@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Merriweather&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto, auto, auto auto;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  height: 100vh;
+}
+
+.header {
+  grid-column: 2 / span 10;
+}
+
+.intro {
+  grid-column: 2 / span 10;
+}
+
+.profiles {
+  grid-column: 2 / span 10;
+}
+
+.footer {
+  grid-column: 2 / span 10;
+}
+
+.header__brand {
+  padding: 60px 0 40px;
+  font-family: "DM Serif Display", sans-serif;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.header__intro {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: inherit;
+  word-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.header__intro-text {
+  font-size: 13px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: end;
+}
+
+.profile__image {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile {
+  display: flex;
+}
+
+.profile__detail {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  order: 1;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 9px;
+  padding: 3px;
+}
+
+.profile-2,
+.profile-4,
+.profile-6 {
+  margin-top: 70px;
+}
+
+.profile__name {
+  padding: 5px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+.footer small {
+  color: #777;
+  padding: 50px;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 80px;
+  }
+
+  .header {
+    grid-column: 2 / span 5;
+  }
+
+  .intro {
+    grid-column: 7 / -1;
+    grid-row: 1;
+  }
+  .footer {
+    grid-column: 2 / -1;
+  }
+  .header__intro {
+    padding: 70px 0 0;
+  }
+  .header__intro-text {
+    width: 50vmin;
+  }
+
+  .profiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .profile-2,
+  .profile-5 {
+    margin-top: 100px;
+  }
+  .profile-4,
+  .profile-6 {
+    margin-top: 0;
+  }
+  .profile__detail {
+    padding: 9px;
+    font-size: 10px;
+    font-family: sans-serif;
+  }
+}
